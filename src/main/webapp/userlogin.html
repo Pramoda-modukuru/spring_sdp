@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - MyApp</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Overall Page Style */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff6f61, #af69ef);
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #fff;
+            animation: slideIn 2s ease-out;
+            position: relative;
+            z-index: 2; /* Set z-index for header text */
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2; /* Set z-index for nav links */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            margin: 0 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #1f1f2e;
+            padding: 40px;
+            margin: 50px auto;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .form-container h2 {
+            font-size: 2.5em;
+            color: #af69ef;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: zoomIn 1s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Form Group Styles */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            border: none;
+            background-color: #2f2f3e;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus {
+            outline: none;
+            transform: scale(1.02);
+            background-color: #37374d;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .form-actions input[type="submit"],
+        .form-actions input[type="reset"] {
+            background: linear-gradient(135deg, #ff6f61, #af69ef);
+            color: #fff;
+            padding: 12px 35px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-actions input[type="submit"]:hover,
+        .form-actions input[type="reset"]:hover {
+            transform: translateY(-5px);
+            background-color: #d85f5f;
+        }
+
+        /* Background Image */
+        header::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('images/bg.jpg') no-repeat center;
+            opacity: 0.1;
+            z-index: 1; /* Lower z-index for the background */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to MyApp</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="userregistration.html">User Registration</a>
+        <a href="userlogin.html">User Login</a>
+    </nav>
+</header>
+
+<main>
+    <section class="form-container">
+        <h2>User Login</h2>
+        <form method="post" action="checkuserlogin.jsp">
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" required>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="Login">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>

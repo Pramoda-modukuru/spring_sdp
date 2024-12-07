@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MyApp</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Overall Page Style */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff6f61, #af69ef);
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #fff;
+            animation: slideIn 2s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            margin: 0 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* About Us Section */
+        .about-container {
+            background-color: #1f1f2e;
+            padding: 40px;
+            margin: 50px auto;
+            border-radius: 15px;
+            max-width: 900px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .about-container h2 {
+            font-size: 2.5em;
+            color: #af69ef;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: zoomIn 1s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .about-content {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #e0e0e0;
+            text-align: justify;
+        }
+
+        /* Background Image */
+        header::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('images/bg.jpg') no-repeat center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .carousel img {
+            width: 300px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensures the image covers the area */
+            margin: 0 10px; /* Space between images */
+            border-radius: 10px; /* Optional: rounded corners for images */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #141414;
+            color: #777;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About MyApp</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="userregistration.html">Register</a>
+        <a href="userlogin.html">Login</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+    <section class="about-container">
+        <h2>Our Mission</h2>
+        <div class="about-content">
+            <p>Welcome to MyApp, your one-stop solution for seamless and intuitive user experiences. Our mission is to create a platform that combines simplicity with cutting-edge technology, offering users a personalized journey with every interaction.</p>
+            <p>Founded with the belief that technology should empower people, our team is dedicated to developing features that help users accomplish their goals quickly and easily, while maintaining security and privacy at the forefront.</p>
+            <p>We continually strive to innovate and evolve, ensuring that MyApp adapts to the growing needs of our users. Join us on this exciting journey as we shape the future of digital interactions.</p>
+        </div>
+        <div class="carousel">
+            <img src="images/slide1.jpg" alt="Slide 1">
+            <img src="images/slide2.jpg" alt="Slide 2">
+            <img src="images/slide3.jpg" alt="Slide 3">
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2024 MyApp. All rights reserved.
+</footer>
+
+</body>
+</html>
